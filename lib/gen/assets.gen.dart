@@ -9,131 +9,63 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsDbGen {
+  const $AssetsDbGen();
+
+  /// File path: assets/db/db_prahse.db
+  String get dbPrahse => 'assets/db/db_prahse.db';
+
+  /// File path: assets/db/wordsnew_db.db
+  String get wordsnewDb => 'assets/db/wordsnew_db.db';
+
+  /// List of all assets
+  List<String> get values => [dbPrahse, wordsnewDb];
+}
+
 class Assets {
   const Assets._();
 
-  static const AssetGenImage ac = AssetGenImage('assets/ac.png');
-  static const AssetGenImage airCoolerPng = AssetGenImage(
-    'assets/air-cooler.png',
-  );
-  static const AssetGenImage airCoolerPng_ = AssetGenImage(
-    'assets/air_cooler.png',
-  );
-  static const AssetGenImage appIcon = AssetGenImage('assets/appIcon.png');
-  static const AssetGenImage battery = AssetGenImage('assets/battery.png');
-  static const AssetGenImage bill = AssetGenImage('assets/bill.png');
-  static const AssetGenImage calculator = AssetGenImage(
-    'assets/calculator.png',
-  );
-  static const AssetGenImage coffeeMaker = AssetGenImage(
-    'assets/coffee_maker.png',
-  );
-  static const AssetGenImage crashBulb = AssetGenImage('assets/crash_bulb.png');
-  static const AssetGenImage dishwasher = AssetGenImage(
-    'assets/dishwasher.png',
-  );
-  static const AssetGenImage dryer = AssetGenImage('assets/dryer.png');
-  static const AssetGenImage electricity = AssetGenImage(
-    'assets/electricity.png',
-  );
-  static const AssetGenImage electricityIcon = AssetGenImage(
-    'assets/electricityIcon.png',
-  );
-  static const AssetGenImage fesco = AssetGenImage('assets/fesco.png');
-  static const AssetGenImage freezer = AssetGenImage('assets/freezer.png');
-  static const AssetGenImage generator = AssetGenImage('assets/generator.png');
-  static const AssetGenImage gepco = AssetGenImage('assets/gepco.png');
-  static const AssetGenImage geyser = AssetGenImage('assets/geyser.png');
-  static const AssetGenImage handshake = AssetGenImage('assets/handshake.png');
-  static const AssetGenImage hesco = AssetGenImage('assets/hesco.png');
-  static const AssetGenImage highVolt = AssetGenImage('assets/high_volt.png');
-  static const AssetGenImage iesco = AssetGenImage('assets/iesco.png');
-  static const AssetGenImage iron = AssetGenImage('assets/iron.png');
-  static const AssetGenImage kelectric = AssetGenImage('assets/kelectric.png');
-  static const AssetGenImage ladySolar = AssetGenImage('assets/lady_solar.png');
-  static const AssetGenImage laptop = AssetGenImage('assets/laptop.png');
-  static const AssetGenImage lesco = AssetGenImage('assets/lesco.png');
-  static const AssetGenImage light = AssetGenImage('assets/light.png');
-  static const AssetGenImage mahine = AssetGenImage('assets/mahine.png');
-  static const AssetGenImage mepco = AssetGenImage('assets/mepco.png');
-  static const AssetGenImage metering = AssetGenImage('assets/metering.png');
-  static const AssetGenImage microwave = AssetGenImage('assets/microwave.png');
-  static const AssetGenImage moreApp = AssetGenImage('assets/more_app.png');
-  static const AssetGenImage pesco = AssetGenImage('assets/pesco.png');
-  static const AssetGenImage printer = AssetGenImage('assets/printer.png');
-  static const AssetGenImage privayIcon = AssetGenImage(
-    'assets/privay_icon.png',
-  );
-  static const AssetGenImage pump = AssetGenImage('assets/pump.png');
-  static const AssetGenImage qesco = AssetGenImage('assets/qesco.png');
-  static const AssetGenImage rateIcon = AssetGenImage('assets/rate_icon.png');
-  static const AssetGenImage refrigerator = AssetGenImage(
-    'assets/refrigerator.png',
-  );
-  static const AssetGenImage sepco = AssetGenImage('assets/sepco.png');
-  static const AssetGenImage solarEnergy = AssetGenImage(
-    'assets/solar-energy.png',
-  );
-  static const AssetGenImage solar = AssetGenImage('assets/solar.png');
-  static const AssetGenImage splash = AssetGenImage('assets/splash.png');
-  static const AssetGenImage tableBulb = AssetGenImage('assets/table_bulb.png');
-  static const AssetGenImage teco = AssetGenImage('assets/teco.png');
-  static const AssetGenImage tv = AssetGenImage('assets/tv.png');
+  static const AssetGenImage ai = AssetGenImage('assets/ai.png');
+  static const AssetGenImage book2 = AssetGenImage('assets/book-2.png');
+  static const AssetGenImage bookSale = AssetGenImage('assets/book-sale.png');
+  static const AssetGenImage celebration =
+      AssetGenImage('assets/celebration.png');
+  static const AssetGenImage daliyQuiz = AssetGenImage('assets/daliy_quiz.png');
+  static const $AssetsDbGen db = $AssetsDbGen();
+  static const AssetGenImage dictionary2 =
+      AssetGenImage('assets/dictionary-2.png');
+  static const AssetGenImage dictionary =
+      AssetGenImage('assets/dictionary.png');
+  static const AssetGenImage magicBook = AssetGenImage('assets/magic-book.png');
+  static const AssetGenImage more = AssetGenImage('assets/more.png');
+  static const AssetGenImage search11 = AssetGenImage('assets/search11.png');
+  static const AssetGenImage statistics =
+      AssetGenImage('assets/statistics.png');
+  static const AssetGenImage translate = AssetGenImage('assets/translate.png');
 
   /// List of all assets
   static List<AssetGenImage> get values => [
-    ac,
-    airCoolerPng,
-    airCoolerPng_,
-    appIcon,
-    battery,
-    bill,
-    calculator,
-    coffeeMaker,
-    crashBulb,
-    dishwasher,
-    dryer,
-    electricity,
-    electricityIcon,
-    fesco,
-    freezer,
-    generator,
-    gepco,
-    geyser,
-    handshake,
-    hesco,
-    highVolt,
-    iesco,
-    iron,
-    kelectric,
-    ladySolar,
-    laptop,
-    lesco,
-    light,
-    mahine,
-    mepco,
-    metering,
-    microwave,
-    moreApp,
-    pesco,
-    printer,
-    privayIcon,
-    pump,
-    qesco,
-    rateIcon,
-    refrigerator,
-    sepco,
-    solarEnergy,
-    solar,
-    splash,
-    tableBulb,
-    teco,
-    tv,
-  ];
+        ai,
+        book2,
+        bookSale,
+        celebration,
+        daliyQuiz,
+        dictionary2,
+        dictionary,
+        magicBook,
+        more,
+        search11,
+        statistics,
+        translate
+      ];
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
+  const AssetGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  });
 
   final String _assetName;
 
@@ -193,8 +125,15 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({AssetBundle? bundle, String? package}) {
-    return AssetImage(_assetName, bundle: bundle, package: package);
+  ImageProvider provider({
+    AssetBundle? bundle,
+    String? package,
+  }) {
+    return AssetImage(
+      _assetName,
+      bundle: bundle,
+      package: package,
+    );
   }
 
   String get path => _assetName;

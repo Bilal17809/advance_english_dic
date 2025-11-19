@@ -1,42 +1,53 @@
-import 'package:electricity_app/presentations/splash_screen/view/splash_view.dart';
+import 'package:electricity_app/presentations/word_game/contrl/contrl.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
-import 'ads_manager/appOpen_ads.dart';
-import 'ads_manager/banner_ads.dart';
-import 'ads_manager/interstitial_ads.dart';
-import 'core/routes/app_routes.dart';
+import '/core/theme/app_theme.dart';
+import 'package:flutter/material.dart';
+import 'adds/instertial_adds.dart';
+import 'adds/native_adss.dart';
+import 'adds/open_screen.dart';
+import 'adds/rewarded_intertitial.dart';
+import 'core/routes/routes.dart';
+import 'core/routes/routes_name.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await MobileAds.instance.initialize();
-
-  Get.put(OpenAppAdController());
-  Get.put(BannerAdController());
-  Get.put(InterstitialAdController()..checkAndShowAdOnVisit());
-
-  runApp(const EBillingApp());
-
-
+  Get.put(PuzzleController());
+  Get.put(AppOpenAdController());
+  Get.put(SplashInterstitialAdController());
+  Get.put(RewardAdController());
+  Get.put(NativeAdController());
+  Get.put(InterstitialAdController());
+  runApp(const MyApp());
   OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
-  OneSignal.initialize("05516325-cd96-4e78-94dc-2935a0b83dd1");
+  OneSignal.initialize('6ed1049d-2e30-44e9-b27d-9fd953cf0eb9');
   OneSignal.Notifications.requestPermission(true);
-
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
 }
-
-class EBillingApp extends StatelessWidget {
-  const EBillingApp({super.key});
-
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      // home: SplashScreen(),
-      initialRoute: AppRoutes.splashScreen,
-      getPages: AppRoutes.routes,
+    return   ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: AppTheme.themeData,
+        initialRoute: RoutesName.splashPage,
+        onGenerateRoute: Routes.generateRoute,
+      ),
     );
   }
 }
