@@ -8,7 +8,6 @@ class ConversationModel {
     required this.conversation,
     required this.category
   });
-
   factory ConversationModel.fromMap(Map<String, dynamic> map) {
     return ConversationModel(
       title: map['title'] as  String?,
