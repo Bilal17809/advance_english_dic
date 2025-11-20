@@ -161,7 +161,7 @@ class _TopicListScreenState extends State<TopicListScreen> {
 
 class Phrases extends StatefulWidget {
   final int id;
-  const Phrases({
+  const Phrases({super.key,
     required this.id
   });
   @override

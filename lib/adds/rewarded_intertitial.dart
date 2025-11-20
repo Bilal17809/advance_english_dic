@@ -17,7 +17,6 @@ class RewardAdController extends GetxController {
   }
 
   void loadAd() {
-    print('Loading Rewarded Interstitial Ad...');
     RewardedInterstitialAd.load(
       adUnitId: adUnitId,
       request: const AdRequest(),

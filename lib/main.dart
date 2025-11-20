@@ -1,3 +1,4 @@
+import 'package:electricity_app/presentations/splash/controller/splash_controller.dart';
 import 'package:electricity_app/presentations/word_game/contrl/contrl.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
@@ -12,6 +13,7 @@ import 'adds/instertial_adds.dart';
 import 'adds/native_adss.dart';
 import 'adds/open_screen.dart';
 import 'adds/rewarded_intertitial.dart';
+import 'core/dependency_inject/dependency_inject.dart';
 import 'core/routes/routes.dart';
 import 'core/routes/routes_name.dart';
 

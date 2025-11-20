@@ -1,17 +1,19 @@
 import 'dart:async';
 import 'dart:ui';
-
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import '../presentations/remove_ads_contrl/remove_ads_contrl.dart';
 import 'open_screen.dart';
+
 class InterstitialAdController extends GetxController {
   InterstitialAd? _interstitialAd;
   bool isAdReadyFor = false;
   int screenVisitCount = 0;
   int adTriggerCount = 3;
   var isAdReady = false.obs;
+  final removeAds = Get.find<RemoveAds>();
 
   @override
   void onInit() {
@@ -55,7 +57,6 @@ class InterstitialAdController extends GetxController {
           update();
         },
         onAdFailedToLoad: (error) {
-          print("Interstitial Ad failed to load: $error");
           isAdReadyFor = false;
         },
       ),
@@ -64,6 +65,9 @@ class InterstitialAdController extends GetxController {
 
 
   void showInterstitialAd() {
+    if(removeAds.isSubscribedGet.value){
+      return;
+    }
     if (_interstitialAd != null && isAdReadyFor) {
       isAdReady.value = true;
 
@@ -78,7 +82,6 @@ class InterstitialAdController extends GetxController {
           update();
         },
         onAdFailedToShowFullScreenContent: (ad, error) {
-          print("Ad failed to show: $error");
           isAdReady.value = false;
           ad.dispose();
           isAdReadyFor = false;
@@ -86,8 +89,6 @@ class InterstitialAdController extends GetxController {
           update();
         },
       );
-
-      print("### Showing Interstitial Ad.");
       _interstitialAd!.show();
       _interstitialAd = null;
     } else {
@@ -96,10 +97,7 @@ class InterstitialAdController extends GetxController {
   }
   void checkAndShowAd() {
     screenVisitCount++;
-    print("### Screen Visit Count: $screenVisitCount");
-
     if (screenVisitCount >= adTriggerCount) {
-      print("### OK");
       if (isAdReadyFor) {
         showInterstitialAd();
       } else {
@@ -120,7 +118,6 @@ class InterstitialAdController extends GetxController {
 //>>>>>>>>>>>>>>>>>
 class SplashInterstitialAdController extends GetxController {
   InterstitialAd? _interstitialAd;
-  // bool isAdReady = false;
   var isAdReady = false.obs;
   bool showSplashAd = false;
 
@@ -143,10 +140,8 @@ class SplashInterstitialAdController extends GetxController {
       await remoteConfig.fetchAndActivate();
 
       showSplashAd = remoteConfig.getBool('SplashInterstitialAd');
-      print("#################### Remote Config: Show Splash Ad = $showSplashAd");
       update();
     } catch (e) {
-      print('Error fetching Remote Config: $e');
       showSplashAd = false;
     }
   }
@@ -162,7 +157,6 @@ class SplashInterstitialAdController extends GetxController {
           update();
         },
         onAdFailedToLoad: (error) {
-          print("Interstitial Ad failed to load: $error");
           isAdReady.value= false;
         },
       ),
@@ -172,8 +166,6 @@ class SplashInterstitialAdController extends GetxController {
 
   Future<void> showInterstitialAdUser({VoidCallback? onAdComplete}) async {
     if (!showSplashAd || _interstitialAd == null) {
-      print("### No ad to show.");
-      // onAdComplete?.call();
       return;
     }
     _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
@@ -184,7 +176,6 @@ class SplashInterstitialAdController extends GetxController {
         loadInterstitialAd();
         onAdComplete?.call();
         update();
-        // await Future.delayed(Duration(milliseconds: 500));
       },
       onAdFailedToShowFullScreenContent: (ad, error) {
         ad.dispose();
@@ -200,7 +191,6 @@ class SplashInterstitialAdController extends GetxController {
 
   Future<void> showInterstitialAd() async{
     if (!showSplashAd) {
-      print("### Splash Ad Disabled via Remote Config");
       return;
     }
     if (_interstitialAd != null) {
@@ -214,15 +204,12 @@ class SplashInterstitialAdController extends GetxController {
           update();
         },
         onAdFailedToShowFullScreenContent: (ad, error) {
-          print("### Ad failed to show: $error");
           ad.dispose();
           isAdReady.value = false;
           loadInterstitialAd();
           update();
         },
       );
-
-      print("### Showing Interstitial Ad.");
       _interstitialAd!.show();
       _interstitialAd = null;
     } else {
