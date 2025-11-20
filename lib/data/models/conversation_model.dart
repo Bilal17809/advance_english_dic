@@ -2,7 +2,6 @@ class ConversationModel {
   final String? title;
   final String? conversation;
   final String? category;
-  // Constructor
   ConversationModel({
     required this.title,
     required this.conversation,
