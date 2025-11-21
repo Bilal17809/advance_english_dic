@@ -1,0 +1,87 @@
+[
+  {
+    "language": "English",
+    "code": "en",
+    "flag": "US",
+    "locale": "en-US",
+    "display_name": "English (United States)"
+  },
+  {
+    "language": "Hindi",
+    "code": "hi",
+    "flag": "IN",
+    "locale": "hi-IN",
+    "display_name": "Hindi (India)"
+  },
+  {
+    "language": "Urdu",
+    "code": "ur",
+    "flag": "PK",
+    "locale": "ur-PK",
+    "display_name": "Urdu (Pakistan)"
+  },
+  {
+    "language": "Arabic",
+    "code": "ar",
+    "flag": "AE",
+    "locale": "ar-AE",
+    "display_name": "Arabic (United Arab Emirates)"
+  },
+  {
+    "language": "Punjabi",
+    "code": "pa",
+    "flag": "IN",
+    "locale": "pa-IN",
+    "display_name": "Punjabi (India)"
+  },
+  {
+    "language": "Bengali",
+    "code": "bn",
+    "flag": "BD",
+    "locale": "bn-BD",
+    "display_name": "Bengali (Bangladesh)"
+  },
+  {
+    "language": "Punjabi (Pakistan)",
+    "code": "pa",
+    "flag": "PK",
+    "locale": "pa-PK",
+    "display_name": "Punjabi (Pakistan)"
+  },
+  {
+    "language": "Japanese",
+    "code": "ja",
+    "flag": "JP",
+    "locale": "ja-JP",
+    "display_name": "Japanese (Japan)"
+  },
+  {
+    "language": "Chinese (Simplified)",
+    "code": "zh-cn",
+    "flag": "CN",
+    "locale": "zh-CN",
+    "display_name": "Chinese (Simplified) (China)"
+  },
+  {
+    "language": "Indonesian",
+    "code": "id",
+    "flag": "ID",
+    "locale": "id-ID",
+    "display_name": "Indonesian (Indonesia)"
+  },
+  {
+    "language": "Tamil",
+    "code": "ta",
+    "flag": "LK",
+    "locale": "ta-LK",
+    "display_name": "Tamil (Sri Lanka)"
+  },
+
+  {
+    "language": "Nepali",
+    "code": "ne",
+    "flag": "NP",
+    "locale": "ne-NP",
+    "display_name": "Nepali (Nepal)"
+  }
+]
