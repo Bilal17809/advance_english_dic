@@ -15,6 +15,8 @@ import 'core/dependency_inject/dependency_inject.dart';
 import 'core/routes/routes.dart';
 import 'core/routes/routes_name.dart';
 
+
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
