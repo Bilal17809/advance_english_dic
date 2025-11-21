@@ -1,6 +1,8 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../ai_translator/controller/speak_dialog_contrl.dart';
+import '../../ai_translator/controller/speak_text_contrl.dart';
 import '/core/common_widgets/bg_circular.dart';
 import '/core/common_widgets/country_flag.dart';
 import '/core/common_widgets/icon_buttons.dart';
@@ -12,24 +14,20 @@ import '/example/contrl.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../../ai_translator/contrl/speak_dialog_contrl.dart';
-import '../../ai_translator/contrl/speak_text_contrl.dart';
-
-class FavrtPage extends StatefulWidget {
-  const FavrtPage({super.key});
+class FavoriteScreen extends StatefulWidget {
+  const FavoriteScreen({super.key});
 
   @override
-  State<FavrtPage> createState() => _FavrtPageState();
+  State<FavoriteScreen> createState() => _FavoriteScreenState();
 }
 
-class _FavrtPageState extends State<FavrtPage> {
+class _FavoriteScreenState extends State<FavoriteScreen> {
   final ConversationController controller = Get.put(ConversationController());
   final SpeakText speakText = Get.put(SpeakText());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(title: const Text('Favorites')),
       body: Stack(
         children: [
           const BackgroundCircles(),

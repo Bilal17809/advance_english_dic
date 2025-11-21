@@ -111,7 +111,7 @@ class AppDrawer extends StatelessWidget {
             leading:  Icon(Icons.star_border,size: 30,color: skyTextColor,),
             title: const Text('Favorite'),
             onTap: () {
-              Get.to(FavrtPage());
+              Get.to(FavoriteScreen());
             },
           ),
         ],

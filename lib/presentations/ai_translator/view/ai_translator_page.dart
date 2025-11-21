@@ -18,10 +18,11 @@ import '../../../core/theme/app_styles.dart';
 import '../../../example/contrl.dart';
 import '../../favrt/view/favrt_page.dart';
 import '../../remove_ads_contrl/remove_ads_contrl.dart';
-import '../contrl/speak_dialog_contrl.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
-import '../contrl/speak_text_contrl.dart';
+
+import '../controller/speak_dialog_contrl.dart';
+import '../controller/speak_text_contrl.dart';
 
 class AiTranslatorPage extends StatefulWidget {
    AiTranslatorPage({super.key});
@@ -299,7 +300,7 @@ class _AiTranslatorPageState extends State<AiTranslatorPage> {
                                   backgroundColor: dividerColor,
                                   child: const Icon(Icons.favorite_border, color: kBlue),
                                   onTap: () {
-                                    Get.to(FavrtPage());
+                                    Get.to(FavoriteScreen());
                                   },
                                 ),
                                 const SizedBox(width: 8),

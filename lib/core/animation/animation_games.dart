@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import '../../adds/rewarded_intertitial.dart';
 import '../../presentations/levels/game_leves.dart';
 import '../../presentations/subscription/subscription_view.dart';
-import '../../presentations/word_game/contrl/contrl.dart';
+import '../../presentations/word_game/controller/controller.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_styles.dart';
 

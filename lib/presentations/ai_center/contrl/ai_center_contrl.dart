@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
-import '../../../adds/instertial_adds.dart';
 import '../../../adds/rewarded_intertitial.dart';
 import '../../../core/animation/animation_games.dart';
 import '../../remove_ads_contrl/remove_ads_contrl.dart';
@@ -15,7 +13,7 @@ final String mistralApiKey = 'TDMyRjLKPOL83jlG17EnUBdUDN1nxwlR';
 final String mistralApiUrl = 'https://api.mistral.ai/v1/chat/completions';
 final String mistralModel = 'open-mistral-7b';
 
-class OpenRouterController extends GetxController {
+class AiCenterController extends GetxController {
 
   late stt.SpeechToText speech;
   var recognizedText = ''.obs;

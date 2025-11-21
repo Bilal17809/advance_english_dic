@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../daily_quiz/controller/quiz_controller.dart';
+import '../../daily_quiz/view/quizz_page.dart';
 import '/adds/instertial_adds.dart';
 import '/core/common_widgets/bg_circular.dart';
 import '/core/common_widgets/icon_buttons.dart';
 import '/core/constant/constant.dart';
 import '/core/theme/app_styles.dart';
-import '../../daliy_quiz/contrl/quizz_controller.dart';
-import '../../daliy_quiz/view/quizz_page.dart';
 import '../../home/view/home_page.dart';
 import '../../remove_ads_contrl/remove_ads_contrl.dart';
 
@@ -188,7 +188,7 @@ class _QuizResultPageState extends State<QuizResultPage> {
                           const SizedBox(height: 16),
                           ElevatedButton(
                             onPressed: () {
-                              final testQuizController = Get.find<TestQuizController>();
+                              final testQuizController = Get.find<DailyQuizController>();
                               testQuizController.resetQuiz();
 
                               Get.off(() => QuizPage(questions: testQuizController.quizzes,

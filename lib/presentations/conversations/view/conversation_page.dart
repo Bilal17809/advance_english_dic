@@ -55,7 +55,7 @@ class _ConversationPageState extends State<ConversationPage> {
   };
 
 
-  final controller = Get.put(ConversationContrl());
+  final controller = Get.put(ConversationController());
   final RemoveAds removeAds = Get.put(RemoveAds());
   final AppOpenAdController appOpenAdController=Get.put(AppOpenAdController());
   final InterstitialAdController interstitialAdController=Get.put(InterstitialAdController());
@@ -190,7 +190,7 @@ class ConversationDetailPage extends StatefulWidget {
 }
 class _ConversationDetailPageState extends State<ConversationDetailPage> with
     TickerProviderStateMixin {
-  final controller = Get.find<ConversationContrl>();
+  final controller = Get.find<ConversationController>();
   final RemoveAds removeAds = Get.put(RemoveAds());
   final AppOpenAdController appOpenAdController=Get.put(AppOpenAdController());
   final InterstitialAdController interstitialAdController=Get.put(InterstitialAdController());

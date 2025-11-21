@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:electricity_app/presentations/subscription/subscription_view.dart';
 import 'package:flutter/gestures.dart';
@@ -7,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
+import '../../ai_translator/controller/speak_dialog_contrl.dart';
 import '/adds/instertial_adds.dart';
 import '/core/common_widgets/bg_circular.dart';
 import '/core/common_widgets/icon_buttons.dart';
@@ -15,7 +15,6 @@ import '/core/common_widgets/textform_field.dart';
 import '/core/constant/constant.dart';
 import '/core/theme/app_colors.dart';
 import '/core/theme/app_styles.dart';
-import '../../ai_translator/contrl/speak_dialog_contrl.dart';
 import '../../remove_ads_contrl/remove_ads_contrl.dart';
 import '../contrl/ai_center_contrl.dart';
 
@@ -24,7 +23,7 @@ class OpenRouterPage extends StatefulWidget {
   State<OpenRouterPage> createState() => _OpenRouterPageState();
 }
 class _OpenRouterPageState extends State<OpenRouterPage> with SingleTickerProviderStateMixin{
-  final controller = Get.put(OpenRouterController());
+  final controller = Get.put(AiCenterController());
   final TextEditingController textController = TextEditingController();
   final SpeakDialog speakDialog = Get.put(SpeakDialog());
 
@@ -247,7 +246,7 @@ class _OpenRouterPageState extends State<OpenRouterPage> with SingleTickerProvid
 
                       SizedBox(height: 16),
                       Obx(() {
-                        final OpenRouterController controller = Get.find<OpenRouterController>();
+                        final AiCenterController controller = Get.find<AiCenterController>();
                         final int remaining = controller.maxFreeInteractions - controller.interactionCount.value;
 
                         return RichText(
@@ -411,7 +410,7 @@ class _OpenRouterPageState extends State<OpenRouterPage> with SingleTickerProvid
 
 Future<void> showSpeakDialog(
     BuildContext context,
-    OpenRouterController controller,
+    AiCenterController controller,
     TextEditingController textController,
     ) async {
   controller.recognizedText.value = '';

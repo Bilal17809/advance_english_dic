@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import '../../../adds/binner_adds.dart';
 import '../../../adds/instertial_adds.dart';
 import '../../../adds/native_adss.dart';
 import '../../../adds/open_screen.dart';
 import '../../../core/common_widgets/bg_circular.dart';
 import '../../../core/common_widgets/go_next_btn.dart';
-import '../../../core/common_widgets/icon_buttons.dart';
 import '../../../core/theme/app_styles.dart';
 import '../../../data/models/quiz_model.dart';
 import '../../quiz_result/view/quiz_result_page.dart';
 import '../../remove_ads_contrl/remove_ads_contrl.dart';
-import '../contrl/quizz_controller.dart';
+import '../controller/quiz_controller.dart';
 
 class QuizPage extends StatefulWidget {
   final List<QuizModel> questions;
@@ -29,7 +26,7 @@ class QuizPage extends StatefulWidget {
 }
 class _QuizPageState extends State<QuizPage> {
   final PageController _pageController = PageController();
-  late final TestQuizController _controller;
+  late final DailyQuizController _controller;
   final RemoveAds removeAds = Get.put(RemoveAds());
   final AppOpenAdController appOpenAdController=Get.put(AppOpenAdController());
   final InterstitialAdController interstitialAdController=Get.put(InterstitialAdController());
@@ -38,7 +35,7 @@ class _QuizPageState extends State<QuizPage> {
   void initState() {
     super.initState();
     interstitialAdController.checkAndShowAd();
-    _controller = Get.put(TestQuizController());
+    _controller = Get.put(DailyQuizController());
     _controller.setQuestions(widget.questions);
   }
   @override

@@ -1,10 +1,9 @@
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../data/models/quiz_model.dart';
 
-class TestQuizController extends GetxController {
+class DailyQuizController extends GetxController {
   final isLoading = true.obs;
   final currentIndex = 0.obs;
   final selectedAnswers = <int, String>{}.obs;

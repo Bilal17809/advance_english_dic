@@ -10,7 +10,7 @@ import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_styles.dart';
-import '../ai_translator/contrl/speak_dialog_contrl.dart';
+import '../ai_translator/controller/speak_dialog_contrl.dart';
 import '../remove_ads_contrl/remove_ads_contrl.dart';
 import '../term/term.dart';
 import '../them_controller/them_controller.dart';

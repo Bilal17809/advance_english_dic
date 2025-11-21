@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:just_audio/just_audio.dart';
 class SpeakText extends GetxController {
-
   final pitch = 1.0.obs;
   final speed = 1.0.obs;
   final AudioPlayer _audioPlayer = AudioPlayer();

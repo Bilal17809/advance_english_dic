@@ -8,7 +8,7 @@ import '/core/animation/animation_games.dart';
 import '/core/common_widgets/bg_circular.dart';
 import '/core/common_widgets/icon_buttons.dart';
 import '/core/theme/app_colors.dart';
-import '../contrl/contrl.dart';
+import '../controller/controller.dart';
 
 
 class PuzzlePage extends StatefulWidget {

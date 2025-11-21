@@ -7,8 +7,8 @@ import 'package:translator/translator.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'dart:async';
 import '../core/common_widgets/country_flag.dart';
-import '../presentations/ai_translator/contrl/speak_dialog_contrl.dart';
-import '../presentations/ai_translator/contrl/speak_text_contrl.dart';
+import '../presentations/ai_translator/controller/speak_dialog_contrl.dart';
+import '../presentations/ai_translator/controller/speak_text_contrl.dart';
 
 class ConversationController extends GetxController {
   final GoogleTranslator translator = GoogleTranslator();

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../../data/hepler/top_phrases.dart';
 import '../../../data/models/conversation_model.dart';
 
-class ConversationContrl extends GetxController {
+class ConversationController extends GetxController {
   var allConversations = <ConversationModel>[].obs;
   var filteredConversations = <ConversationModel>[].obs;
   var selectedCategory = ''.obs;

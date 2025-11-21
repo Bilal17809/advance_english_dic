@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../daily_quiz/view/quizz_page.dart';
 import '/adds/binner_adds.dart';
 import '/adds/instertial_adds.dart';
 import '/adds/open_screen.dart';
@@ -8,7 +9,6 @@ import '/core/common_widgets/bg_circular.dart';
 import '/core/common_widgets/icon_buttons.dart';
 import '/core/theme/app_colors.dart';
 import '/core/theme/app_styles.dart';
-import '../../daliy_quiz/view/quizz_page.dart';
 import '../../remove_ads_contrl/remove_ads_contrl.dart';
 import '../contrl/quiz_level_contrl.dart';
 class SubLevelPage extends StatefulWidget {
@@ -17,7 +17,7 @@ class SubLevelPage extends StatefulWidget {
 }
 
 class _SubLevelPageState extends State<SubLevelPage> {
-  final QuizLevel controller = Get.put(QuizLevel());
+  final QuizLevelController controller = Get.put(QuizLevelController());
   Timer? _refreshTimer;
   final RemoveAds removeAds = Get.put(RemoveAds());
   final AppOpenAdController appOpenAdController=Get.put(AppOpenAdController());
@@ -69,7 +69,7 @@ class _SubLevelPageState extends State<SubLevelPage> {
               ),
             ),
           ),
-          GetBuilder<QuizLevel>(
+          GetBuilder<QuizLevelController>(
             builder: (_) {
               if (controller.isLoading) {
                 return const Center(child: CircularProgressIndicator());

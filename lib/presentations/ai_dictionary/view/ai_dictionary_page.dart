@@ -3,10 +3,8 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import '../../../adds/binner_adds.dart';
 import '../../../adds/instertial_adds.dart';
-import '../../../adds/native_adss.dart';
 import '../../../adds/open_screen.dart';
 import '../../../core/common_widgets/bg_circular.dart';
 import '../../../core/common_widgets/icon_buttons.dart';
@@ -15,9 +13,9 @@ import '../../../core/common_widgets/textform_field.dart';
 import '../../../core/constant/constant.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_styles.dart';
-import '../../ai_translator/contrl/speak_dialog_contrl.dart';
+import '../../ai_translator/controller/speak_dialog_contrl.dart';
 import '../../remove_ads_contrl/remove_ads_contrl.dart';
-import '../contrl/ai_dictionary_contrl.dart';
+import '../controller/ai_dictionary_controlerl.dart';
 
 class AiDictionaryPage extends StatefulWidget {
   const AiDictionaryPage({super.key});

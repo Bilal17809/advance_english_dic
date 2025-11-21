@@ -1,10 +1,8 @@
-import 'package:electricity_app/presentations/splash/controller/splash_controller.dart';
-import 'package:electricity_app/presentations/word_game/contrl/contrl.dart';
+import '/presentations/word_game/controller/controller.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import '/core/theme/app_theme.dart';
@@ -21,6 +19,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await MobileAds.instance.initialize();
+  DependencyInject.init();
   Get.put(PuzzleController());
   Get.put(AppOpenAdController());
   Get.put(SplashInterstitialAdController());
